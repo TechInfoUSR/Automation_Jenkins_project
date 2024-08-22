@@ -23,7 +23,7 @@ public class LoginTest1 {
 	    @Test
 	    public void testValidLogin() {
 	        loginPage.login("KGF");
-	        Assert.assertTrue(DriverManager.getDriver().getTitle().contains("Dashboard"));
+	        Assert.assertTrue(DriverManager.getDriver().getTitle().contains("YouTube"));
 	    }
 
 	    @AfterMethod

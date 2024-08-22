@@ -13,7 +13,7 @@ public class LoginPage {
     WebDriver driver = DriverManager.getDriver();
     WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
-    By usernameField = By.id("//input[@id=\"search\"]");
+    By usernameField = By.xpath("//input[@id=\"search\"]");
     By passwordField = By.xpath("//*[@id=\"search-icon-legacy\"]/yt-icon/span/div");
 //    By loginButton = By.id("login");
 
@@ -23,6 +23,8 @@ public class LoginPage {
         
         wait.until(ExpectedConditions.elementToBeClickable(passwordField)); 
         driver.findElement(passwordField).click();;
+        System.out.println(driver.getTitle());
+        driver.getTitle();
 //        driver.findElement(loginButton).click();
     }
 }
